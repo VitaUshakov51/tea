@@ -1,0 +1,15 @@
+<div class="container text-center">
+  <h1>Описание товара</h1>
+  <div class="loader-bg" *ngIf="loading">
+    <div class="loader"></div>
+  </div>
+  <a class="image-link" >
+    <img class="card-img-top w-50" src="{{product.image}}">
+  </a>
+  <div class="card-body">
+    <h5 class="card-title fs-1 mb-3">{{product.title}}</h5>
+    <h5 class="card-title fs-2 mb-3">Цена: {{product.price}}</h5>
+    <a [routerLink]="'/order'" [queryParams]="{product: product.title}" class="btn btn-primary" >Купить</a>
+    <p class="card-text mb-3">{{product.description}}</p>
+  </div>
+</div>

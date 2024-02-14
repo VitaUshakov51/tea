@@ -1,0 +1,44 @@
+<main class="overflow-hidden">
+  <section class="pt-5 pb-5 animated zoomIn">
+    <div class="container position-relative ">
+      <div class="slider">
+        <div class="slide">
+          <img class="slide-img w-100" src="../assets/images/slide1.png" alt="Чай">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pt-5 pb-5  fadeInDown">
+    <div class="container">
+      <h2 class=" fw-bold text-center mb-5">Ответы на часто задаваемые вопросы</h2>
+      <div id="accordion" class="col-lg-8 m-auto">
+        <h3 class="fw-bold">Собираете ли вы подарочные боксы?</h3>
+        <div>
+          <p>Да, у нас есть такая услуга. Мы можем собрать подарочный бокс на любой вкус, объем и стоимость!</p>
+        </div>
+        <h3 class="fw-bold">Сколько у вас разновидностей чая?</h3>
+        <div>
+          <p>У нас более 2000 разновидностей чая со всех уголков света!</p>
+        </div>
+        <h3 class="fw-bold">В какой срок осуществляется доставка?</h3>
+        <div>
+          <p>Доставка о 1 до 3 дней по Москве и МО</p>
+        </div>
+        <h3 class="fw-bold">У вас обновляется ассортимент?</h3>
+        <div>
+          <p>Конечно! Мы стараемся регулярно обновлять свой ассортимент!</p>
+        </div>
+        <h3 class="fw-bold">Какого объема у вас пачки чая?</h3>
+        <div>
+          <p>От 100 гр до 1 кг</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</main>
+<div class="popUp" *ngIf="popUpService.isPopUpShow">
+  <div class="popUpText">Посмотрите наши чайные коллекции</div>
+  <a [routerLink]="'/catalog'" (click)="closePopUp()" class="btn btn-primary">Смотреть</a>
+</div>
